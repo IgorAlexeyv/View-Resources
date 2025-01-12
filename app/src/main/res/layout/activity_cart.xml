@@ -6,4 +6,139 @@
     android:layout_height="match_parent"
     tools:context=".CartActivity">
 
+    <com.google.android.material.appbar.MaterialToolbar
+        style="@style/Toolbar"
+        android:id="@+id/cartMaterialToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        app:title="Cart"
+        app:navigationIcon="@drawable/ic_arrow_back"
+        app:menu="@menu/cart_tool_bar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        style="@style/TextViewOnSurfaceVariant"
+        android:id="@+id/textCartItemCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textSize="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/cartMaterialToolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="4 item in your cart" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/textCartItemCount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/textCartOrderTotal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/cart_item"
+        tools:itemCount="2"/>
+
+    <TextView
+        style="@style/TextViewOnSurface"
+        android:id="@+id/textCartOrderTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:textSize="28dp"
+        app:layout_constraintBottom_toTopOf="@+id/textCartSubtotal"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Order Total:" />
+
+    <TextView
+        style="@style/TextViewTertiary"
+        android:id="@+id/textCartOrderTotalAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:textSize="28dp"
+        app:layout_constraintBottom_toTopOf="@+id/textCartSubtotal"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="$175.50" />
+
+    <TextView
+        style="@style/TextViewOnSurface"
+        android:id="@+id/textCartSubtotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/textCartShipping"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Subtotal:" />
+
+    <TextView
+        style="@style/TextViewTertiary"
+        android:id="@+id/textCartSubtotalAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/textCartShipping"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="$140" />
+
+    <TextView
+        style="@style/TextViewOnSurface"
+        android:id="@+id/textCartShipping"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/textCartTax"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Shipping:" />
+
+    <TextView
+        style="@style/TextViewTertiary"
+        android:id="@+id/textCartShippingAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/textCartTax"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="$25" />
+
+    <TextView
+        style="@style/TextViewOnSurface"
+        android:id="@+id/textCartTax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/cartPlaceOrder"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Tax:" />
+
+    <TextView
+        style="@style/TextViewTertiary"
+        android:id="@+id/textCartTaxAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/cartPlaceOrder"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="$10.50" />
+
+    <Button
+        style="@style/Buttons"
+        android:id="@+id/cartPlaceOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="@string/place_order"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:icon="@drawable/ic_mood"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

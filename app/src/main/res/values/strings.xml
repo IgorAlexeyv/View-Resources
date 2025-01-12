@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">View &amp; Resources</string>
+    <string name="tax">Tax:</string>
+    <string name="shipping">Shipping:</string>
+    <string name="subtotal">Subtotal:</string>
+    <string name="order_total">Order Total:</string>
+    <string name="goods">Goods</string>
+    <string name="sport">Sport</string>
+    <string name="groceries">Groceries</string>
+    <string name="food">Food</string>
+    <string name="category">Category</string>
+    <string name="discription">Great products at low prices with discounts</string>
+    <string name="items_in_cart">item in your cart</string>
+    <string name="search">Search</string>
+    <string name="more">More</string>
+    <string name="icon">Icon</string>
+    <string name="login">Login</string>
+    <string name="reset_my_password">Reset my password</string>
+    <string name="cancel">Cancel</string>
+    <string name="goods_image">Goods Image</string>
+    <string name="place_order">Place order</string>
 </resources>

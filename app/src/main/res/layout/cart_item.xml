@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cart_item_container"
+    android:layout_width="match_parent"
+    android:layout_height="104dp">
+
+    <ImageView
+        android:id="@+id/cart_item_image"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_margin="12dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_attach"
+        android:contentDescription="@string/goods_image"/>
+
+    <TextView
+        style="@style/TextViewOnSurface"
+        android:id="@+id/cart_item_caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="16dp"
+        android:textSize="28dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cart_item_image"
+        tools:text="List Item 1"/>
+
+    <TextView
+        style="@style/TextViewOnSurfaceVariant"
+        android:id="@+id/cart_item_category"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toEndOf="@+id/cart_item_image"
+        app:layout_constraintBottom_toTopOf="@+id/cart_item_description"
+        tools:text="Category"/>
+
+    <TextView
+        style="@style/TextViewOnSurfaceVariant"
+        android:id="@+id/cart_item_description"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toEndOf="@+id/cart_item_image"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:text="Supporting line text lorem ipsum..."/>
+
+    <TextView
+        style="@style/TextViewTertiary"
+        android:id="@+id/cart_item_price"
+        android:layout_width="wrap_content"
+        android:layout_height="28dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        android:textSize="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="$35"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -13,4 +13,11 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+    <style name="Buttons" parent="ButtonsStyle"></style>
+    <style name="ButtonsLogin" parent="ButtonsLoginStyle"></style>
+    <style name="Toolbar" parent="ToolbarStyle"></style>
+    <style name="CompoundViewContacts" parent="CompoundViewContactsStyle"></style>
+    <style name="TextViewOnSurface" parent="TextViewOnSurfaceStyle"></style>
+    <style name="TextViewOnSurfaceVariant" parent="TextViewOnSurfaceVariantStyle"></style>
+    <style name="TextViewTertiary" parent="TextViewTertiaryStyle"></style>
 </resources>

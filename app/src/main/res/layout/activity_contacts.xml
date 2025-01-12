@@ -6,4 +6,122 @@
     android:layout_height="match_parent"
     tools:context=".ContactsActivity">
 
+    <com.google.android.material.appbar.MaterialToolbar
+        style="@style/Toolbar"
+        android:id="@+id/contactsMaterialToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:title="Ivan Petrov"
+        app:navigationIcon="@drawable/ic_arrow_back"
+        app:menu="@menu/contacts_tool_bar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/surface"
+        app:layout_constraintTop_toBottomOf="@+id/contactsMaterialToolbar"
+        app:layout_constraintBottom_toTopOf="@+id/contactsButtonRegister"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <otus.gpb.homework.viewandresources.components.CompoundViewContacts
+                style="@style/CompoundViewContacts"
+                android:id="@+id/name"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:contacts_title="Name"
+                app:contacts_text="Ivan Petrov"
+                app:contacts_icon="@drawable/ic_name"/>
+
+            <otus.gpb.homework.viewandresources.components.CompoundViewContacts
+                style="@style/CompoundViewContacts"
+                android:id="@+id/phone"
+                android:layout_width="0dp"
+                app:layout_constraintWidth_percent="0.55"
+                app:layout_constraintTop_toBottomOf="@id/name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:contacts_title="Phone"
+                app:contacts_text="+7(999)123-45-67"
+                app:contacts_icon="@drawable/ic_phone"/>
+
+            <otus.gpb.homework.viewandresources.components.CompoundViewContacts
+                style="@style/CompoundViewContacts"
+                android:id="@+id/phone_select"
+                android:layout_width="0dp"
+                app:layout_constraintTop_toBottomOf="@id/name"
+                app:layout_constraintStart_toEndOf="@id/phone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:contacts_title="Select"
+                app:contacts_text="Mobile"
+                app:contacts_icon="@drawable/ic_select"/>
+
+            <otus.gpb.homework.viewandresources.components.CompoundViewContacts
+                style="@style/CompoundViewContacts"
+                android:id="@+id/address"
+                app:layout_constraintTop_toBottomOf="@id/phone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:contacts_title="Address"
+                app:contacts_text="123, Lenin street, Apt.6"
+                app:contacts_icon="@drawable/ic_address"/>
+
+            <otus.gpb.homework.viewandresources.components.CompoundViewContacts
+                style="@style/CompoundViewContacts"
+                android:id="@+id/city"
+                android:layout_width="0dp"
+                app:layout_constraintWidth_percent="0.45"
+                app:layout_constraintTop_toBottomOf="@id/address"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/country"
+                app:contacts_title="City"
+                app:contacts_text="Tokyo"/>
+
+            <otus.gpb.homework.viewandresources.components.CompoundViewContacts
+                style="@style/CompoundViewContacts"
+                android:id="@+id/country"
+                android:layout_width="0dp"
+                app:layout_constraintTop_toBottomOf="@id/address"
+                app:layout_constraintStart_toEndOf="@id/city"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:contacts_title="Country"
+                app:contacts_text="Australia"/>
+
+            <otus.gpb.homework.viewandresources.components.CompoundViewContacts
+                style="@style/CompoundViewContacts"
+                android:id="@+id/birthday"
+                app:layout_constraintTop_toBottomOf="@id/city"
+                app:layout_constraintStart_toStartOf="parent"
+                app:contacts_title="Date"
+                app:contacts_text="Birthday"
+                app:contacts_icon="@drawable/ic_date"/>
+
+            <otus.gpb.homework.viewandresources.components.CompoundViewContacts
+                style="@style/CompoundViewContacts"
+                android:id="@+id/notes"
+                app:layout_constraintTop_toBottomOf="@id/birthday"
+                app:layout_constraintStart_toStartOf="parent"
+                app:contacts_title="Notes"
+                app:contacts_text="Loves burgers and french fries"
+                app:contacts_icon="@drawable/ic_notes"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <Button
+        style="@style/Buttons"
+        android:id="@+id/contactsButtonRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Register"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

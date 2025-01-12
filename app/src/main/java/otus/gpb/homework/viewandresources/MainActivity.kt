@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.res.ResourcesCompat
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class MainActivity : AppCompatActivity() {
@@ -21,6 +22,7 @@ class MainActivity : AppCompatActivity() {
         findViewById<Button>(R.id.signin_button).setOnClickListener {
             MaterialAlertDialogBuilder(this)
                 .setView(R.layout.dialog_signin)
+                .setBackground(ResourcesCompat.getDrawable(getResources(), R.drawable.shape_round_corners,null))
                 .show()
         }
     }

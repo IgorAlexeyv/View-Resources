@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ButtonsStyle" parent="Widget.Material3.Button">
+        <item name="android:backgroundTint">@color/primary</item>
+        <item name="android:textColor">@color/on_primary</item>
+        <item name="android:textAppearance">@style/TextAppearance.Material3.TitleMedium</item>
+    </style>
+    <style name="ButtonsLoginStyle" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:backgroundTint">@color/surface_container_high</item>
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:textAppearance">@style/TextAppearance.Material3.TitleMedium</item>
+        <item name="strokeColor">@color/primary</item>
+    </style>
+    <style name="ToolbarTitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">28dp</item>
+    </style>
+    <style name="ToolbarStyle" parent="Widget.Material3.Toolbar">
+        <item name="android:background">@color/surface</item>
+        <item name="titleTextAppearance">@style/ToolbarTitleText</item>
+        <item name="titleTextColor">@color/on_surface</item>
+        <item name="navigationIconTint">@color/on_surface_variant</item>
+    </style>
+    <style name="TextViewOnSurfaceStyle">
+        <item name="android:textColor">@color/on_surface</item>
+    </style>
+    <style name="TextViewOnSurfaceVariantStyle">
+        <item name="android:textColor">@color/on_surface_variant</item>
+    </style>
+    <style name="TextViewTertiaryStyle">
+        <item name="android:textColor">@color/tertiary</item>
+    </style>
+    <style name="CompoundViewContactsStyle">
+        <item name="android:background">@color/surface_container_highest</item>
+        <item name="contacts_titleColor">@color/on_surface_variant</item>
+        <item name="contacts_textColor">@color/on_surface</item>
+        <item name="contacts_iconColor">@color/on_surface_variant</item>
+        <item name="contacts_dividerColor">@color/on_surface_variant</item>
+        <item name="android:layout_height">55dp</item>
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:layout_marginBottom">2dp</item>
+        <item name="android:layout_marginLeft">2dp</item>
+        <item name="android:layout_marginRight">2dp</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+</resources>

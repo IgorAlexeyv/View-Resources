@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CompoundViewContacts">
+        <attr name="contacts_title" format="string"/>
+        <attr name="contacts_titleColor" format="color"/>
+        <attr name="contacts_text" format="string"/>
+        <attr name="contacts_textColor" format="color"/>
+        <attr name="contacts_icon" format="reference"/>
+        <attr name="contacts_iconColor" format="color"/>
+        <attr name="contacts_dividerColor" format="color"/>
+    </declare-styleable>
+</resources>
